@@ -8,6 +8,6 @@
         update_cache: true
       changed_when: False
   tasks:
-    - include_tasks:tasks/packages.yml
+    - include_tasks: tasks/packages.yml
 
 
