@@ -1,0 +1,14 @@
+- name: add ansible user to run a cronjob on the baground
+  user:
+    name: ansible
+    system: yes
+
+
+
+- name: copy the sudoer file to the target
+  copy:
+    src: files/sudoers_ansible
+    dist: etc/sudoers.d/ansible
+    owner: root
+    group: root
+    mode: 0440
