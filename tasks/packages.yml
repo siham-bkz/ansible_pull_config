@@ -1,0 +1,8 @@
+ 
+
+- name: install htop
+  apt:
+    name:
+      - htop
+      - tmux
+    state: present

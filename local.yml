@@ -1,8 +1,13 @@
 - hosts: localhost
   connection: local
-  tasks:
-
-    - name: install htop
+  become: true
+  pre_tasks:
+    
+    - name: update the server
       apt:
-        name: htop
-        state: present
+        update_cache: true
+      changed_when: False
+  tasks:
+    - include: packages.yml
+
+
