@@ -1,4 +1,4 @@
-- name: add ansible user to run a cronjob on the baground
+- name: add ansible user to run a cronjob on the background
   user:
     name: ansible
     system: yes
